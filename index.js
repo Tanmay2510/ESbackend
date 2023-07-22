@@ -1,8 +1,8 @@
 const express = require("express");
 const cors = require("cors");
-const router = require("../routes/router")
-const session = require('../middleware/session');
-const connectDB = require("../config/db");
+const router = require("./routes/router")
+const session = require('./middleware/session');
+const connectDB = require("./config/db");
 const bp = require('body-parser')
 require('dotenv/config');
 
@@ -32,4 +32,3 @@ app.get("/", (req, res) => {
   });
 
 app.listen(port, () => console.log(`APIs listening on port ${port}!`));
-module.exports = app;
